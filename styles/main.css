@@ -1,0 +1,143 @@
+
+
+:root {
+    --primary: #0b7285;
+    --background: #f8f9fa;
+    --input-border: #ced4da;
+    --input-focus: #74c0fc;
+    --result-bg: #e3fafc;
+    --result-text: #087f5b;
+    --warning-bg: #fff3bf;
+    --warning-text: #856404;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    background-color: var(--background);
+    color: #212529;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #111;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 2px solid var(--input-border);
+    background-color: transparent;
+    transition: border-color 0.25s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-bottom-color: var(--input-focus);
+}
+
+.field {
+    margin-bottom: 2rem;
+}
+
+.banknote-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.banknote-buttons button {
+    flex: 1 1 calc(25% - 0.75rem);
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #f1f3f5;
+    color: #212529;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.banknote-buttons button:hover {
+    background-color: #e3fafc;
+    color: #087f5b;
+}
+
+.result {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    background: var(--result-bg);
+    color: var(--result-text);
+    display: none;
+}
+
+.result small {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    color: #495057;
+}
+
+.result.warning {
+    background: var(--warning-bg);
+    color: var(--warning-text);
+}
+
+@media (min-width: 600px) {
+    body {
+        max-width: 480px;
+        margin: auto;
+    }
+}
+
+.actions {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.clear-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.6em 1.2em;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.clear-btn:hover {
+    background: #c0392b;
+}
+
+.clear-btn:active {
+    background: #a93226;
+}
+
+.clear-btn {
+    display: none;
+}
