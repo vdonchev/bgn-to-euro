@@ -1,0 +1,1 @@
+A simple HTML/JS PWA App for calculating the change in euro.
