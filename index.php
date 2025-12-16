@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-title" content="Euro Converter"/>
     <link rel="manifest" href="assets/site.webmanifest"/>
 
-    <link rel="stylesheet" href="styles/main.css?v=1.1">
+    <link rel="stylesheet" href="styles/main.css?v=1.2">
 
 </head>
 <body>
@@ -81,6 +81,6 @@
 <!--    });-->
 <!--</script>-->
 
-<script src="scripts/main.js?v=1.1"></script>
+<script src="scripts/main.js?v=1.2"></script>
 </body>
 </html>
