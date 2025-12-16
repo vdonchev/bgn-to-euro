@@ -69,3 +69,47 @@ function clearFields() {
 clearBtn.addEventListener("click", clearFields);
 priceInput.addEventListener("input", updateChange);
 paidInput.addEventListener("input", updateChange);
+
+const eurInput = document.getElementById("eur");
+const bgnInput = document.getElementById("bgn");
+
+let isSyncing = false;
+
+eurInput.addEventListener("input", () => {
+    if (isSyncing) return;
+
+    const eur = parseFloat(eurInput.value);
+    if (isNaN(eur)) {
+        bgnInput.value = "";
+        return;
+    }
+
+    isSyncing = true;
+    bgnInput.value = (eur * rate).toFixed(2);
+    isSyncing = false;
+});
+
+bgnInput.addEventListener("input", () => {
+    if (isSyncing) return;
+
+    const bgn = parseFloat(bgnInput.value);
+    if (isNaN(bgn)) {
+        eurInput.value = "";
+        return;
+    }
+
+    isSyncing = true;
+    eurInput.value = (bgn / rate).toFixed(2);
+    isSyncing = false;
+});
+
+document.querySelectorAll('input[type="number"]').forEach(input => {
+    input.addEventListener("focus", () => {
+        input.select();
+    });
+
+    input.addEventListener("click", () => {
+        input.select();
+    });
+});
+

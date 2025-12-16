@@ -44,6 +44,20 @@
     <button type="button" id="clearBtn" class="clear-btn">Изчисти</button>
 </div>
 
+<h2 class="converter-title">Конвертор EUR ⇄ BGN</h2>
+
+<div class="converter">
+    <div class="field">
+        <label for="eur">Евро</label>
+        <input type="number" id="eur" step="0.01" inputmode="decimal" placeholder="0.00">
+    </div>
+
+    <div class="field">
+        <label for="bgn">Лева</label>
+        <input type="number" id="bgn" step="0.01" inputmode="decimal" placeholder="0.00">
+    </div>
+</div>
+
 <!--<button id="installBtn" hidden>Install App</button>-->
 <!---->
 <!--<script>-->

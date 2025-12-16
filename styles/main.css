@@ -141,3 +141,27 @@ input[type="number"]:focus {
 .clear-btn {
     display: none;
 }
+
+.converter-title {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.converter {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.converter .field {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+@media (max-width: 400px) {
+    .converter {
+        flex-direction: column;
+    }
+}
